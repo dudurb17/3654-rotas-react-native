@@ -18,8 +18,35 @@ const Drawer = createDrawerNavigator();
 
 const MyDrawer = () => {
   return (
-    <Drawer.Navigator screenOptions={{ headerShown: true }}>
-      <Drawer.Screen name="Lista de Pets" component={TabRoutes} />
+    <Drawer.Navigator
+      screenOptions={{
+        drawerStyle: {
+          backgroundColor: "#36D6Ad",
+        },
+        drawerLabelStyle: {
+          color: "#FFF",
+          fontSize: 14,
+          fontFamily: "PoppinsRegular",
+          fontWeight: "400",
+          lineHeight: 20,
+        },
+        headerTransparent: true,
+        headerTitle: "",
+      }}
+    >
+      <Drawer.Screen
+        name="Lista de Pets"
+        options={{
+          drawerLabel: "Pets para adoção",
+          drawerIcon: () => (
+            <Image
+              source={require("../assets/pets.png")}
+              style={{ width: 24, height: 24 }}
+            />
+          ),
+        }}
+        component={TabRoutes}
+      />
       <Drawer.Screen name="Perfil" component={Perfil} />
       <Drawer.Screen name="Sair" component={Home} />
     </Drawer.Navigator>
