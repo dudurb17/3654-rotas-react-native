@@ -9,10 +9,12 @@ import {
   TouchableOpacity,
 } from "react-native";
 import PaginaBase from "../PaginaBase";
+import { useNavigation } from "@react-navigation/native";
 
-export default function Login({ navigation }) {
+export default function Login() {
   const [nome, onChangeNome] = React.useState("");
   const [senha, onChangeSenha] = React.useState("");
+  const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
@@ -46,7 +48,10 @@ export default function Login({ navigation }) {
               placeholderTextColor={"#BCBCBC"}
             />
 
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => navigation.navigate("Tab")}
+            >
               <Text style={styles.textoBotao}>Entrar</Text>
             </TouchableOpacity>
           </View>
