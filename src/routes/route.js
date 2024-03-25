@@ -5,6 +5,7 @@ import Login from "../paginas/Login";
 import Cadastro from "../paginas/Cadastro";
 import ListaPets from "../paginas/ListaPets";
 import Mensagem from "../paginas/Mensagem";
+import Sobre from "../paginas/Sobre";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Image } from "react-native";
 
@@ -52,6 +53,8 @@ const Route = () => {
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Cadastro" component={Cadastro} />
+        <Stack.Screen name="Sobre" component={Sobre} />
+
         <Stack.Screen name="Tab" component={TabRoutes} />
       </Stack.Navigator>
     </NavigationContainer>

@@ -29,7 +29,7 @@ export default function Sobre({ navigation }) {
                                             nomePet: nome
                                         },
                                     }} style={styles.local}>
-                                        Falar com responsável
+                                        Falar com responsável!
                                     </Link>
                                 </View>
 
@@ -40,7 +40,7 @@ export default function Sobre({ navigation }) {
                                             nomePet: nome
                                         },
                                     }} style={styles.local}>
-                                        Compartilhar
+                                        Compartilhar!
                                     </Link>
                                 </View>
                             </View>
