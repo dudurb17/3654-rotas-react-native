@@ -47,8 +47,32 @@ const MyDrawer = () => {
         }}
         component={TabRoutes}
       />
-      <Drawer.Screen name="Perfil" component={Perfil} />
-      <Drawer.Screen name="Sair" component={Home} />
+      <Drawer.Screen
+        name="Perfil"
+        options={{
+          drawerLabel: "Perfil",
+          drawerIcon: () => (
+            <Image
+              source={require("../assets/settings.png")}
+              style={{ width: 24, height: 24 }}
+            />
+          ),
+        }}
+        component={Perfil}
+      />
+      <Drawer.Screen
+        name="Sair"
+        options={{
+          drawerLabel: "Pets para adoção",
+          drawerIcon: () => (
+            <Image
+              source={require("../assets/logout.png")}
+              style={{ width: 24, height: 24 }}
+            />
+          ),
+        }}
+        component={Home}
+      />
     </Drawer.Navigator>
   );
 };
